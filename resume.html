@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashraj Singh Rana - Resume</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #eeeeee;
+            color: #222222;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .resume {
+            background-color: white;
+            margin: 30px auto;
+            max-width: 850px;
+            padding: 45px 55px;
+        }
+
+        header {
+            border-bottom: 2px solid #333333;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0 0 5px;
+        }
+
+        .job-title {
+            color: #555555;
+            font-size: 18px;
+            margin: 0 0 12px;
+        }
+
+        .contact {
+            font-size: 14px;
+        }
+
+        .contact a {
+            color: #333333;
+        }
+
+        section {
+            border-bottom: 1px solid #dddddd;
+            padding: 22px 0;
+        }
+
+        section:last-of-type {
+            border-bottom: 0;
+        }
+
+        h2 {
+            color: #d45d4f;
+            font-size: 20px;
+            margin: 0 0 12px;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-size: 17px;
+            margin: 0 0 3px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        ul {
+            margin: 8px 0 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .education-line,
+        .project-line {
+            color: #555555;
+            font-size: 14px;
+        }
+
+        .skills span {
+            background-color: #eeeeee;
+            display: inline-block;
+            margin: 4px 4px 4px 0;
+            padding: 5px 10px;
+        }
+
+        @media (max-width: 600px) {
+            .resume {
+                margin: 0;
+                padding: 30px 22px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .resume {
+                margin: 0;
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="resume">
+        <header>
+            <h1>Ashraj Singh Rana</h1>
+            <p class="job-title">MCA Student | Full-Stack Developer</p>
+            <p class="contact">
+                Email: <a href="mailto:ashrajsingh9@gmail.com">ashrajsingh9@gmail.com</a> |
+                Phone: <a href="tel:+917418529630">+91 9827900755</a> |
+                India
+            </p>
+        </header>
+
+        <section>
+            <h2>Career Objective</h2>
+            <p>I am an MCA student who enjoys building simple and useful websites. I am looking for an opportunity to
+                improve my development skills and work on real-world projects.</p>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <h3>Master of Computer Applications (MCA)</h3>
+            <p class="education-line">Alliance University | Expected graduation: 2026</p>
+        </section>
+
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>React</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>Git</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>Projects</h2>
+            <h3>BALANCEO — Finance Management Web App</h3>
+            <p class="project-line">React · Node.js · Express · MongoDB · TypeScript · JWT · Recoil · Rende</p>
+            <ul>
+                <li>Migrated full codebase from JavaScript to TypeScript, fixed broken production build pipeline, and
+                    deployed on
+                    Render with UptimeRobot health checks</li>
+                <li> Implemented JWT authentication, bcrypt password hashing, protected routes, Recoil state management,
+                    and
+                    income/expense analytics dashboard</li>
+            </ul>
+
+            <h3 style="margin-top: 18px;">CATCHUP — Real-Time Chat Application </h3>
+            <p class="project-line">MongoDB · Express · React · Node.js · WebSocket</p>
+            <ul>
+                <li> Built real-time messaging using WebSocket connections with privacy-first architecture — users
+                    communicate via
+                    unique private IDs, no personal data exposed
+                </li>
+            </ul>
+            <h3 style="margin-top: 18px;">BOOKVAULT — Library Management System </h3>
+            <p class="project-line">Python · Django · Django ORM · SQLite · HTML · CSS</p>
+            <ul>
+                <li>Full-stack library system with role-based dashboards for librarians and students — book issuance,
+                    returns, fine tracking,
+                    and availability counts using Django ORM
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <p>Full Stack Development Cohort (MERN)</p>
+            <p>NPTEL — Programming with Generative AI</p>
+        </section>
+
+        <section>
+            <h2>Strengths</h2>
+            <ul>
+                <li>Willingness to learn new technologies</li>
+                <li>Problem-solving and attention to detail</li>
+                <li>Teamwork and communication</li>
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>

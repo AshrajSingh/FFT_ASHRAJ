@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ConnectHub - Log In</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+      color: #1c1e21;
+    }
+
+    .page {
+      display: flex;
+      height: 100vh;
+      min-height: 640px;
+    }
+
+    .left-panel {
+      flex: 1.4;
+      position: relative;
+      padding: 40px 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .logo-mark {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: #2455e6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark span {
+      color: #fff;
+      font-size: 26px;
+      font-weight: 800;
+      font-family: Georgia, serif;
+    }
+
+    .collage {
+      position: relative;
+      flex: 1;
+      margin: 20px 0;
+      margin-left: 17rem;
+      margin-right: -7rem;
+    }
+
+    .card {
+      position: absolute;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+    }
+
+    .card-photo {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      padding: 14px;
+    }
+
+    .card-1 {
+      width: 300px;
+      height: 220px;
+      top: 10%;
+      left: 8%;
+      background: linear-gradient(135deg, #7f8fa6, #dcdde1);
+    }
+
+    .card-2 {
+      width: 300px;
+      height: 340px;
+      top: 4%;
+      left: 34%;
+      background: linear-gradient(160deg, #ffb199, #ff6f61);
+    }
+
+    .card-3 {
+      width: 220px;
+      height: 260px;
+      top: 46%;
+      left: 12%;
+      background: #ffffff;
+      border: 1px solid #eee;
+      padding: 12px;
+    }
+
+    .card-3 .thumb {
+      width: 100%;
+      height: 70%;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #f6d365, #fda085);
+    }
+
+    .card-3 .lines {
+      margin-top: 10px;
+    }
+
+    .card-3 .lines div {
+      height: 8px;
+      border-radius: 4px;
+      background: #eceef0;
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      position: absolute;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+    }
+
+    .badge-time {
+      top: 18%;
+      left: 52%;
+      width: 76px;
+      height: 34px;
+      border-radius: 20px;
+      background: #6c5ce7;
+      color: #fff;
+      font-size: 13px;
+      gap: 6px;
+    }
+
+    .badge-emoji {
+      top: 8%;
+      left: 22%;
+      width: 60px;
+      height: 60px;
+      background: #ffd166;
+      font-size: 28px;
+    }
+
+    .badge-heart {
+      top: 55%;
+      left: 46%;
+      width: 62px;
+      height: 62px;
+      background: #ff3b6a;
+      color: #fff;
+      font-size: 26px;
+    }
+
+    .badge-store {
+      top: 22%;
+      left: 10%;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #1c1e21;
+      color: #fff;
+      font-size: 16px;
+    }
+
+    .badge-star {
+      top: 42%;
+      left: 12%;
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: #2455e6;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .avatar {
+      position: absolute;
+      top: 66%;
+      left: 30%;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: linear-gradient(160deg, #f9d976, #f39f86);
+      border: 4px solid #2455e6;
+    }
+
+    .headline {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      max-width: 460px;
+    }
+
+    .headline .accent {
+      color: #2455e6;
+    }
+
+    .divider {
+      width: 1px;
+      background: #dadde1;
+      margin: 60px 0;
+    }
+
+    .right-panel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .login-box {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .login-box h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 15px 16px;
+      font-size: 15px;
+      border: 1px solid #dddfe2;
+      border-radius: 8px;
+      margin-bottom: 14px;
+      outline: none;
+    }
+
+    .login-box input:focus {
+      border-color: #2455e6;
+    }
+
+    .btn-primary {
+      width: 100%;
+      background-color: #2455e6;
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      padding: 13px 0;
+      cursor: pointer;
+      margin-bottom: 18px;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #1c44bd;
+    }
+
+    .forgot-link {
+      display: block;
+      text-align: center;
+      color: #2455e6;
+      font-size: 14px;
+      text-decoration: none;
+      margin-bottom: 26px;
+    }
+
+    .forgot-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn-outline {
+      display: block;
+      width: 100%;
+      background: #fff;
+      color: #2455e6;
+      font-size: 16px;
+      font-weight: 600;
+      border: 1px solid #2455e6;
+      border-radius: 8px;
+      padding: 12px 0;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background-color 0.15s ease;
+    }
+
+    .btn-outline:hover {
+      background: #f0f4ff;
+    }
+
+    .brand-footer {
+      text-align: center;
+      color: #8a8d91;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.3px;
+    }
+
+    .lang-footer {
+      border-top: 1px solid #dadde1;
+      padding: 16px 60px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: #737373;
+    }
+
+    .lang-footer span {
+      cursor: pointer;
+    }
+
+    .lang-footer span:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="page">
+    <div class="left-panel">
+      <div class="collage">
+        <div class="card card-1"></div>
+        <div class="card card-2"></div>
+        <div class="badge badge-emoji"></div>
+        <div class="badge badge-time"></div>
+        <div class="badge badge-heart"></div>
+        <div class="badge badge-store"></div>
+        <div class="badge badge-star"></div>
+        <div class="avatar"></div>
+      </div>
+
+      <div class="headline">
+        Explore the things<br><span class="accent">you love.</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="right-panel">
+      <div class="login-box">
+        <h2>Log in to ConnectHub</h2>
+        <form action="#" method="post">
+          <input type="text" name="username" placeholder="Email address or mobile number" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit" class="btn-primary">Log in</button>
+          <a href="#" class="forgot-link">Forgotten password?</a>
+          <button type="button" class="btn-outline">Create new account</button>
+        </form>
+        <div class="brand-footer">◈ ConnectHub</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lang-footer">
+    <span>English (UK)</span>
+    <span>ಕನ್ನಡ</span>
+    <span>اردو</span>
+    <span>मराठी</span>
+    <span>తెలుగు</span>
+    <span>हिन्दी</span>
+    <span>தமிழ்</span>
+    <span>More languages...</span>
+  </div>
+
+</body>
+
+</html>

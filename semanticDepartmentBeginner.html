@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Department Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f9f8;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #6ee7c1;
+            padding: 25px 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav ul li {
+            background-color: #dffaf2;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        section {
+            width: 90%;
+            margin: 25px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        h2 {
+            text-align: center;
+            color: #b31217;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid #222;
+            border-radius: 8px;
+        }
+
+        .highlights {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin-top: 15px;
+        }
+
+        .highlights div {
+            background-color: #6ee7c1;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .card {
+            width: 260px;
+            background-color: #f2fbf8;
+            border: 1px solid #d9d9d9;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #0a7a5d;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #6ee7c1;
+            color: #000;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #bbb;
+            border-radius: 5px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 18px;
+            background-color: #1ca77d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #1d1d1d;
+            color: white;
+            text-align: center;
+            padding: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Department of Computer Applications</h1>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>About Department</li>
+                <li>Faculty</li>
+                <li>Courses</li>
+                <li>Timetable</li>
+                <li>Achievements</li>
+                <li>Events</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <p>
+                The Master of Computer Applications (MCA) program with specializations in Data Science,
+                General, Generative AI, and Game Designing is designed to deliver advanced computing knowledge
+                along with domain-specific expertise aligned to emerging industry trends.
+            </p>
+            <p>
+                The program follows a comprehensive, application-driven approach, enabling students to build
+                strong conceptual understanding and practical proficiency in core areas such as programming,
+                data structures, algorithms, database management systems, cloud computing, and software engineering.
+            </p>
+
+            <marquee>
+                <h2>Dear MCA Graduates, Welcome! to AU</h2>
+            </marquee>
+
+            <h2>Highlights</h2>
+            <div class="gallery">
+                <img src="./elchinator-security-5043368.jpg.jpeg" alt="Security">
+                <img src="./geralt-artificial-intelligence-4389372.jpg.jpeg" alt="AI">
+                <img src="./paulos-ai-8330457.jpg.jpeg" alt="AI 2">
+                <img src="./sunriseforever-game-console-6603120.jpg.jpeg" alt="Game Design">
+            </div>
+
+            <div class="highlights">
+                <div>Generative AI</div>
+                <div>Data Science</div>
+                <div>Game Designing</div>
+                <div>Cybersecurity</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>About Department</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Vision</h3>
+                    <p>To create a vibrant environment that encourages innovation and leadership in technology.</p>
+                </div>
+                <div class="card">
+                    <h3>Mission</h3>
+                    <p>To provide quality education and practical learning in computer applications.</p>
+                </div>
+                <div class="card">
+                    <h3>Objectives</h3>
+                    <p>To build analytical thinking, creativity, and industry-ready skills in students.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Faculty</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Dr. Ananya Rao</h3>
+                    <p>HOD & Professor</p>
+                    <p>Data Structures, AI, DBMS</p>
+                </div>
+                <div class="card">
+                    <h3>Prof. Sandeep Kumar</h3>
+                    <p>Associate Professor</p>
+                    <p>Java, OOP, Software Engineering</p>
+                </div>
+                <div class="card">
+                    <h3>Prof. Meena Iyer</h3>
+                    <p>Assistant Professor</p>
+                    <p>Python, Data Science</p>
+                </div>
+                <div class="card">
+                    <h3>Mr. Arjun Singh</h3>
+                    <p>Assistant Professor</p>
+                    <p>Web Development, Cloud Computing</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Courses</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Semester 1</h3>
+                    <ul>
+                        <li>Problem Solving Using C</li>
+                        <li>Discrete Mathematics</li>
+                        <li>Computer Organization</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Semester 2</h3>
+                    <ul>
+                        <li>Data Structures</li>
+                        <li>DBMS</li>
+                        <li>Operating Systems</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Semester 3</h3>
+                    <ul>
+                        <li>Java Programming</li>
+                        <li>Web Technologies</li>
+                        <li>Software Engineering</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Timetable</h2>
+            <table>
+                <tr>
+                    <th>Day</th>
+                    <th>9:00-10:00</th>
+                    <th>10:15-11:15</th>
+                    <th>11:30-12:30</th>
+                    <th>1:30-2:30</th>
+                </tr>
+                <tr>
+                    <td>Monday</td>
+                    <td>Data Structures</td>
+                    <td>DBMS</td>
+                    <td>Java</td>
+                    <td>Web Lab</td>
+                </tr>
+                <tr>
+                    <td>Tuesday</td>
+                    <td>Python</td>
+                    <td>OS</td>
+                    <td>Networks</td>
+                    <td>Python Lab</td>
+                </tr>
+                <tr>
+                    <td>Wednesday</td>
+                    <td>AI</td>
+                    <td>Software Engineering</td>
+                    <td>Web Technologies</td>
+                    <td>DBMS Lab</td>
+                </tr>
+                <tr>
+                    <td>Thursday</td>
+                    <td>Cloud Computing</td>
+                    <td>Algorithms</td>
+                    <td>Research</td>
+                    <td>Java Lab</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Achievements</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Student Achievements</h3>
+                    <ul>
+                        <li>Top ranks in university exams</li>
+                        <li>Hackathon winners</li>
+                        <li>Placement in top IT companies</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Faculty Achievements</h3>
+                    <ul>
+                        <li>Research publications</li>
+                        <li>Workshops conducted</li>
+                        <li>Mentoring student startups</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Events</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Workshops</h3>
+                    <ul>
+                        <li>AI Workshop</li>
+                        <li>Web Development Bootcamp</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Seminars</h3>
+                    <ul>
+                        <li>Data Science Trends</li>
+                        <li>Cloud and DevOps</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Hackathons</h3>
+                    <ul>
+                        <li>Code Sprint</li>
+                        <li>AI for Social Good</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <div class="card" style="margin: 0 auto; max-width: 600px;">
+                <p><strong>Department Address:</strong> Aurora University, Hyderabad</p>
+                <p><strong>Email:</strong> mca@aurora.edu</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+            </div>
+
+            <form>
+                <label>Name</label>
+                <input type="text" placeholder="Enter your name">
+
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email">
+
+                <label>Message</label>
+                <textarea placeholder="Write your message"></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

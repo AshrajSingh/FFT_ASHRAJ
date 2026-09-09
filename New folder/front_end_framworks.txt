@@ -1,0 +1,18 @@
+<!-- founder of HTML: Tim Berners Lee 1990
+
+category of tags:
+	1. Pair tags:
+		combination of opening and closing tags
+	2. unpair tags:
+		Tag which only has an opening tag.
+
+structure of HTML: -->
+<html>
+	<head>
+		<title> </title>
+	</head>
+	
+	<body> 
+		<h1> Alliance University </h1>
+	</body>
+</html>
