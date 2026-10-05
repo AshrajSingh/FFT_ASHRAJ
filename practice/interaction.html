@@ -1,0 +1,33 @@
+<html>
+	<head> 
+		<title> Event Listener </title>
+	
+		<style> 
+#btn{border: 1px solid black;}
+		</style>
+	</head>
+
+	<body>
+		<h1> User Interaction </h1>
+		
+		<input type='text' placeholder='enter your name' id='name' />
+		
+		<button type='submit' id="btn"> Greet </button>
+		<p id='msg'></p>
+
+<script>
+	const nameInpt = document.getElementById("name");
+	const button = document.getElementById("btn");
+	const message = document.getElementById("msg");
+
+	button.addEventListener("click", function() { 
+
+						const name = nameInpt.value;
+						if(name == ''){ message.textContent="Please enter you name" }
+						else{ message.textContent="Hello " + name + "!!!" }
+						});
+	
+</script>
+	</body>
+
+</html>

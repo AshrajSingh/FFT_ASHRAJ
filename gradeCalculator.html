@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 35%, #312e81 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #e2e8f0;
+        }
+
+        .calculator {
+            background: rgba(15, 23, 42, 0.78);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            backdrop-filter: blur(12px);
+            padding: 30px 28px 24px;
+            width: min(760px, 92vw);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(15, 23, 42, 0.45);
+        }
+
+        h2 {
+            margin: 0 0 24px;
+            text-align: center;
+            color: #f8fafc;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            letter-spacing: 0.04em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(180px, 1fr));
+            gap: 18px 20px;
+        }
+
+        .subject {
+            background: rgba(15, 23, 42, 0.45);
+            border: 1px solid rgba(148, 163, 184, 0.18);
+            border-radius: 16px;
+            padding: 14px 14px 12px;
+        }
+
+        .subject label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: #cbd5e1;
+            letter-spacing: 0.04em;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 10px;
+            background: rgba(15, 23, 42, 0.7);
+            color: #f8fafc;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        input:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+        }
+
+        input::placeholder {
+            color: #94a3b8;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px 18px;
+            margin-top: 24px;
+            background: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+            color: #f8fafc;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            cursor: pointer;
+            box-shadow: 0 12px 24px rgba(59, 130, 246, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 16px 28px rgba(124, 58, 237, 0.4);
+        }
+
+        #result {
+            margin-top: 22px;
+            min-height: 88px;
+            padding: 16px 18px;
+            border-radius: 14px;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.8;
+            color: #e2e8f0;
+            background: rgba(30, 41, 59, 0.75);
+            border: 1px solid rgba(148, 163, 184, 0.15);
+        }
+
+        @media (max-width: 560px) {
+            .calculator {
+                padding: 24px 18px 18px;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="calculator">
+        <h2>Grade Calculator</h2>
+
+        <div class="grid">
+            <div class="subject">
+                <label>FFT</label>
+                <input type="number" id="fft" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>ADS</label>
+                <input type="number" id="ads" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>BAD</label>
+                <input type="number" id="bad" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>PST</label>
+                <input type="number" id="pst" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>CLS</label>
+                <input type="number" id="cls" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>AUI</label>
+                <input type="number" id="aui" placeholder="Enter marks">
+            </div>
+
+            <div class="subject">
+                <label>DST</label>
+                <input type="number" id="dst" placeholder="Enter marks">
+            </div>
+        </div>
+
+        <button onclick="calculate()">Calculate Grade</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculate() {
+            let subjects = ["fft", "ads", "bad", "pst",
+                            "cls", "aui", "dst"];
+
+            let total = 0;
+
+            for (let subject of subjects) {
+                let marks = document.getElementById(subject).value;
+
+                if (marks === "" || marks < 0 || marks > 100) {
+                    document.getElementById("result").innerHTML =
+                        "Enter marks between 0 and 100";
+                    return;
+                }
+
+                total += Number(marks);
+            }
+
+            let percentage = total / 7;
+            let grade;
+
+            if (percentage >= 90) {
+                grade = "A+";
+            } else if (percentage >= 80) {
+                grade = "A";
+            } else if (percentage >= 70) {
+                grade = "B";
+            } else if (percentage >= 60) {
+                grade = "C";
+            } else if (percentage >= 40) {
+                grade = "D";
+            } else {
+                grade = "F (Fail)";
+            }
+
+            document.getElementById("result").innerHTML =
+                "Total Marks: " + total + " / 700<br>" +
+                "Percentage: " + percentage.toFixed(2) + "%<br>" +
+                "Grade: " + grade;
+        }
+    </script>
+
+</body>
+</html>

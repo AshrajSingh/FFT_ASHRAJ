@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashraj Singh Rana | Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f7f3f1;
+            color: #302b36;
+        }
+
+        header {
+            padding: 25px;
+            color: white;
+            background-color: #493044;
+            text-align: center;
+            animation: fadeIn 1.5s;
+            border-bottom: 5px solid #d47a62;
+        }
+
+        nav {
+            margin-bottom: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 0;
+            list-style: none;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ffd08a;
+        }
+
+        .intro {
+            padding: 20px 0;
+        }
+
+        .intro h1 {
+            margin: 10px 0;
+            font-size: 36px;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: auto;
+            padding: 25px;
+        }
+
+        section {
+            margin: 0;
+            padding: 25px;
+            background-color: white;
+            text-align: center;
+            animation: fadeIn 1.5s;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #00000014;
+        }
+
+        .about,
+        #projects {
+            grid-column: 1 / 3;
+        }
+
+        h2 {
+            color: #59394f;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .card {
+            padding: 20px;
+            border: 1px solid #e6d7df;
+            border-left: 4px solid #d47a62;
+            background-color: #fffaf8;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            background-color: #fbe9e2;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 0;
+            color: white;
+            background-color: #bc5f50;
+            text-decoration: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #9e463e;
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 10px 15px;
+            border: 1px solid #76a99c;
+            background-color: #e2f0ec;
+            transition: 0.3s;
+        }
+
+        .skills-list li:hover {
+            transform: scale(1.05);
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-top: 12px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #b9aeb8;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 100px;
+        }
+
+        .form-status {
+            color: #28735f;
+        }
+
+        footer {
+            padding: 15px;
+            color: white;
+            background-color: #493044;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @media (max-width: 650px) {
+            main {
+                grid-template-columns: 1fr;
+                padding: 15px;
+            }
+
+            .about,
+            #projects {
+                grid-column: 1;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                margin-bottom: 20px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            .intro h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="intro" id="home">
+            <p>Hello, I am</p>
+            <h1>Ashraj Singh Rana</h1>
+            <p>Student and Web Developer</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>I am a student interested in web development and technology. I enjoy learning new skills and building
+                useful things for the web.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <article class="card">
+                    <h3>College Event Website</h3>
+                    <p>A simple website for sharing event details and schedules.</p>
+                    <a class="button" href="#contact">Ask about project</a>
+                </article>
+                <article class="card">
+                    <h3>Food Delivery Website</h3>
+                    <p>A sample menu and ordering experience for a local restaurant.</p>
+                    <a class="button" href="#contact">Ask about project</a>
+                </article>
+                <article class="card">
+                    <h3>Student Management System</h3>
+                    <p>A small project for organizing student information.</p>
+                    <a class="button" href="#contact">Ask about project</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul class="skills-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <label for="name">Name
+                    <input id="name" name="name" type="text" required>
+                </label>
+                <label for="email">Email
+                    <input id="email" name="email" type="email" required>
+                </label>
+                <label for="message">Message
+                    <textarea id="message" name="message" required></textarea>
+                </label>
+                <div>
+                    <button class="button" type="submit">Send Message</button>
+                </div>
+                <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ashraj's Portfolio</p>
+    </footer>
+
+    <script>
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            document.getElementById("form-status").textContent = "Thank you for your message!";
+            document.getElementById("contact-form").reset();
+        });
+    </script>
+</body>
+
+</html>

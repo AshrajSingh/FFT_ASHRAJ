@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive college event page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f0;
+            color: #26332d;
+        }
+
+        .header {
+            background-color: #285943;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .top {
+            margin: 0;
+            font-size: 28px;
+        }
+
+        nav {
+            background-color: #26332d;
+            text-align: center;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #f2c14e;
+        }
+
+        main {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        section {
+            background-color: white;
+            margin: 20px;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px #00000018;
+        }
+
+        .Banner {
+            text-align: center;
+            background-color: #fff3d2;
+        }
+
+        .Banner h1 {
+            color: #285943;
+            font-size: 35px;
+        }
+
+        .Banner p {
+            font-size: 18px;
+        }
+
+        button,
+        .register-button {
+            display: inline-block;
+            background-color: #e0ad32;
+            color: #26332d;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        button:hover,
+        .register-button:hover {
+            background-color: #c89520;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            border: 1px solid #d4dfd5;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #285943;
+            color: white;
+        }
+
+        .speaker {
+            display: inline-block;
+            width: 45%;
+            padding: 15px;
+            margin: 10px 1%;
+            background-color: #e7f0e8;
+            border-radius: 6px;
+            border-left: 4px solid #e0ad32;
+            transition: 0.3s;
+        }
+
+        .speaker:hover {
+            transform: translateY(-3px);
+        }
+
+        .speaker h3 {
+            color: #285943;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid #aab8ac;
+            border-radius: 4px;
+        }
+
+        label {
+            display: inline-block;
+            width: 70px;
+        }
+
+        footer {
+            background-color: #26332d;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 8px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+
+            .Banner h1 {
+                font-size: 28px;
+            }
+
+            .speaker {
+                width: 100%;
+                margin: 8px 0;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            input {
+                width: 100%;
+            }
+
+            label {
+                width: 100%;
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="top">responsive college event page</h1>
+    </header>
+    <nav>
+        <a href="#home">home</a>
+        <a href="#details">details</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#speakers">Speaker</a>
+        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <main>
+        <section id="home" class="Banner">
+            <h1>College Tech Fest 2026</h1>
+            <p>Welcome to our College Event</p>
+            <a class="register-button" href="#register">Register Now</a>
+        </section>
+
+        <section id="details">
+            <p><b>Date:</b> 15 October 2026</p>
+            <p><b>Time:</b> 10:00 AM</p>
+            <p><b>Venue:</b> College Auditorium</p>
+        </section>
+        <section id="schedule">
+            <h2>Schedule</h2>
+
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Event</th>
+                </tr>
+                <tr>
+                    <td>10:00 AM</td>
+                    <td>Opening Ceremony</td>
+                </tr>
+                <tr>
+                    <td>11:00 AM</td>
+                    <td>Technical Session</td>
+                </tr>
+                <tr>
+                    <td>1:00 PM</td>
+                    <td>Lunch</td>
+                </tr>
+
+                <tr>
+                    <td>2:00 PM</td>
+                    <td>Project Presentation</td>
+                </tr>
+            </table>
+        </section>
+        <section id="speakers">
+            <h2>Speakers</h2>
+
+            <div class="speaker">
+                <h3>Mr. Raghv Sir</h3>
+                <p>FULL Stack developer</p>
+            </div>
+
+            <div class="speaker">
+                <h3>Mr. Abhishek</h3>
+                <p>Ai Expert</p>
+            </div>
+        </section>
+        <section id="register">
+            <h2>Registration</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+                <input id="name" name="name" type="text" required><br><br>
+
+                <label for="email">Email:</label>
+                <input id="email" name="email" type="email" required><br><br>
+
+                <label for="phone">Phone:</label>
+                <input id="phone" name="phone" type="tel" required><br><br>
+
+                <button type="submit">Register</button><br><br>
+
+            </form>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <p>Email: aufest@gmail.com</p>
+            <p>Phone: 9327296666</p>
+        </section>
+
+
+    </main>
+
+    <footer>
+        <p>© 2026 College Tech Fest</p>
+    </footer>
+
+
+
+</body>
+
+</html>

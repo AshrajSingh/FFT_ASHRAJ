@@ -16,3 +16,11 @@ structure of HTML: -->
 		<h1> Alliance University </h1>
 	</body>
 </html>
+
+JAVASCRIPT
+in 1995 by BRENDAN EICH
+
+types of js
+1. Inline
+2. Internal
+3. External
